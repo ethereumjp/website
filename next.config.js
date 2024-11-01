@@ -11,7 +11,7 @@ const nextConfig = {
     return [
       {
         source: "/ethtokyo2024",
-        destination: "https://www.ethtokyo.com",
+        destination: "https://www.ethtokyo.org",
         permanent: true,
       },
     ];

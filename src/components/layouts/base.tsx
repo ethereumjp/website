@@ -29,11 +29,11 @@ export const metadata = {
   openGraph: {
     title: "Ethereum Japan",
     description: "Everything Ethereum in Japan",
-    url: "https://ethereumjapan.org",
-    siteName: "ethereumjapan.org",
+    url: "https://ethereumjp.org",
+    siteName: "ethereumjp.org",
     images: [
       {
-        url: "https://ethereumjapan.org/logo/ej.png",
+        url: "https://ethereumjp.org/logo/ej.png",
         width: 800,
         height: 600,
       },
@@ -48,7 +48,7 @@ export const metadata = {
     siteId: "1511737631948034048",
     creator: "@Ethereum_JP",
     creatorId: "1511737631948034048",
-    images: ["https://ethereumjapan.org/ej.png"],
+    images: ["https://ethereumjp.org/ej.png"],
   },
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#B8FAF6" },

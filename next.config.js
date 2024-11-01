@@ -2,7 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  basePath: process.env.NODE_ENV === "production" ? "/archived_site" : "",
+  basePath: process.env.NODE_ENV === "production" ? "/website" : "",
   // i18n: { locales: ['en', 'ja'], defaultLocale: 'en', localeDetection: false },
   compiler: {
     emotion: true,
@@ -14,11 +14,6 @@ const nextConfig = {
         destination: "https://www.ethtokyo.com",
         permanent: true,
       },
-      // {
-      //   source: "/*",
-      //   destination: "https://www.ethtokyo.com/",
-      //   permanent: true,
-      // },
     ];
   },
 };

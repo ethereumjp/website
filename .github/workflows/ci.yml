@@ -29,9 +29,9 @@ jobs:
         if: steps.build-cache.outputs.cache-hit != 'true'
         run: yarn turbo build
         env:
-          NEXT_PUBLIC_AIRTABLE_API_KEY: ${{ vars.NEXT_PUBLIC_AIRTABLE_API_KEY }}
-          NEXT_PUBLIC_AIRTABLE_BASE_INQUIRYFORM: ${{ vars.NEXT_PUBLIC_AIRTABLE_BASE_INQUIRYFORM }}
-          NEXT_PUBLIC_AIRTABLE_TABLE_INQUIRYFORM: ${{ vars.NEXT_PUBLIC_AIRTABLE_TABLE_INQUIRYFORM }}
+          NEXT_PUBLIC_AIRTABLE_API_KEY: ${{ secrets.NEXT_PUBLIC_AIRTABLE_API_KEY }}
+          NEXT_PUBLIC_AIRTABLE_BASE_INQUIRYFORM: ${{ secrets.NEXT_PUBLIC_AIRTABLE_BASE_INQUIRYFORM }}
+          NEXT_PUBLIC_AIRTABLE_TABLE_INQUIRYFORM: ${{ secrets.NEXT_PUBLIC_AIRTABLE_TABLE_INQUIRYFORM }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

@@ -119,6 +119,7 @@ export const NavMenu: FC = () => {
           ETHTokyo
         </a> */}
         <MenuItem id="events" href="/event" text="Events" />
+        <MenuItem id="news" href="/news" text="News" />
         <MenuItem id="contact" href="/contact" text="Contact" />
         <MenuItem id="about" href="/about" text="About Us" />
       </div>

@@ -36,6 +36,7 @@ jobs:
         run: yarn build-static
         env:
           NODE_ENV: production
+          DO_NOT_TRACK: 1
           NEXT_PUBLIC_AIRTABLE_PAT: ${{ secrets.NEXT_PUBLIC_AIRTABLE_PAT }}
           NEXT_PUBLIC_AIRTABLE_BASE: ${{ secrets.NEXT_PUBLIC_AIRTABLE_BASE }}
           NEXT_PUBLIC_AIRTABLE_TABLE: ${{ secrets.NEXT_PUBLIC_AIRTABLE_TABLE }}

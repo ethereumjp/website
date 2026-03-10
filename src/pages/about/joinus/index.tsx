@@ -37,15 +37,8 @@ const Wanted: NextPage<PageProps> = ({ params, searchParams }) => {
       <div css={wrapperStyle}>
         <section id="hiring">
           <div css={css`margin-bottom: 4rem;`}>
-            <p>Ethereum Japanでは現在協力者を若干名募集しています。</p>
-            <p>人員の募集は、不定期で更新され、Twitterまたは本websiteにて告知を行います。</p>
-            <p>
-              Ethereum Japanは有志団体であり、基本的に有償での対価は発生しません。
-              <Link href="/about">私たちの主旨</Link>
-              に賛同いただける方を募集しています。
-            </p>
+            <p>メンバーの募集は不定期で更新され、Twitterまたは本websiteにて告知を行います。</p>
           </div>
-
           <ul
             css={css`
               margin-bottom: 4rem;
@@ -59,26 +52,24 @@ const Wanted: NextPage<PageProps> = ({ params, searchParams }) => {
               }
             `}
           >
-            {positions.map((p) => {
-              if (p.open) {
-                return (
-                  <li css={css`list-style-type: none;`}>
+            {positions.some((p) => p.open) ? (
+              positions
+                .filter((p) => p.open)
+                .map((p) => (
+                  <li key={p.role} css={css`list-style-type: none;`}>
                     <h3>{p.role}</h3>
                     <ul>
-                      {p.requirements.map((_, r) => (
-                        <li key={_}>{r}</li>
+                      {p.requirements.map((r) => (
+                        <li key={r}>{r}</li>
                       ))}
                     </ul>
                   </li>
-                );
-              }
-            })}
+                ))
+            ) : (
+              <li css={css`list-style-type: none;`}>現在募集中のポジションはありません。</li>
+            )}
           </ul>
         </section>
-
-        <p>
-          <Link href="/contact">問い合わせページ</Link>よりご連絡ください。
-        </p>
       </div>
     </Layout>
   );

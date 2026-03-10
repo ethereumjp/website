@@ -1,7 +1,7 @@
 export const positions = [
   {
-    open: true,
-    role: "税務アドバイザー",
+    open: false,
+    role: "公認会計士",
     requirements: ["税理士資格を有する方", "会計、税務に関する実務経験を持つ方"],
   },
   {

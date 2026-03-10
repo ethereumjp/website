@@ -11,12 +11,5 @@
   "scss.validate": false,
   "stylelint.enable": true,
   "stylelint.configFile": ".stylelintrc.js",
-  "stylelint.validate": [
-    "css",
-    "scss",
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact"
-  ]
+  "stylelint.validate": ["css", "scss", "javascript", "typescript", "javascriptreact", "typescriptreact"]
 }

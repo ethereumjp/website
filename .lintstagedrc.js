@@ -1,4 +1,4 @@
-const path = require("path");
+const path = require("node:path");
 
 const buildLintCommand = (filenames) =>
   `npx yarn run biome lint ${filenames.map((f) => path.relative(process.cwd(), f)).join(" ")}`;

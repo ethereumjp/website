@@ -1,12 +1,6 @@
 import { css } from "@emotion/react";
 import SendIcon from "@mui/icons-material/Send";
-import {
-  Alert,
-  Button,
-  TextField,
-  ThemeProvider,
-  createTheme,
-} from "@mui/material";
+import { Alert, Button, TextField, ThemeProvider, createTheme } from "@mui/material";
 import { useRouter } from "next/router";
 import { FC, useState } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
@@ -145,9 +139,7 @@ const ContactForm: FC = () => {
                   required: "Your organization is required",
                 })}
                 error={!!errors.organization}
-                helperText={
-                  errors?.organization ? errors.organization.message : "\u00a0"
-                }
+                helperText={errors?.organization ? errors.organization.message : "\u00a0"}
                 {...field}
               />
             )}
@@ -182,8 +174,7 @@ const ContactForm: FC = () => {
                 label={t.FORM.WALLET}
                 disabled={!!sendStatus}
                 {...register("wallet", {
-                  required:
-                    "Your Ethereum address is required (`0x...` or ENS)",
+                  required: "Your Ethereum address is required (`0x...` or ENS)",
                 })}
                 error={!!errors.wallet}
                 helperText={errors?.wallet ? errors.wallet.message : "\u00a0"}
@@ -206,8 +197,7 @@ const ContactForm: FC = () => {
                   required: "Your inquiry is required",
                   maxLength: {
                     value: 2000,
-                    message:
-                      "Your inquiry must be 2000 characters or fewer in length.",
+                    message: "Your inquiry must be 2000 characters or fewer in length.",
                   },
                 })}
                 error={!!errors.inquiry}
@@ -224,18 +214,8 @@ const ContactForm: FC = () => {
             margin-right: auto;
           `}
           >
-            <Button
-              endIcon={<SendIcon />}
-              type="submit"
-              variant="outlined"
-              color="inherit"
-              disabled={!!sendStatus}
-            >
-              {sendStatus
-                ? sendStatus === 2
-                  ? "Submitted"
-                  : "Submitting"
-                : "Send"}
+            <Button endIcon={<SendIcon />} type="submit" variant="outlined" color="inherit" disabled={!!sendStatus}>
+              {sendStatus ? (sendStatus === 2 ? "Submitted" : "Submitting") : "Send"}
             </Button>
           </div>
         </form>

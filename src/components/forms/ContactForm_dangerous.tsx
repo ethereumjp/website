@@ -1,12 +1,6 @@
 import { css } from "@emotion/react";
 import SendIcon from "@mui/icons-material/Send";
-import {
-  Alert,
-  Button,
-  TextField,
-  ThemeProvider,
-  createTheme,
-} from "@mui/material";
+import { Alert, Button, TextField, ThemeProvider, createTheme } from "@mui/material";
 import { useRouter } from "next/router";
 import { FC, useState } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
@@ -75,13 +69,7 @@ const ContactFormDangerous: FC = () => {
         setSendStatus(3);
         throw new Error("Invalid name. (min 3 char, max 30 char)");
       }
-      if (
-        !(
-          typeof organization === "string" &&
-          2 < organization.length &&
-          organization.length < 31
-        )
-      ) {
+      if (!(typeof organization === "string" && 2 < organization.length && organization.length < 31)) {
         setSendStatus(3);
         throw new Error("Invalid organization. (min 3 char, max 30 char)");
       }
@@ -93,13 +81,7 @@ const ContactFormDangerous: FC = () => {
         setSendStatus(3);
         throw new Error("Invalid wallet address.");
       }
-      if (
-        !(
-          typeof inquiry === "string" &&
-          29 < inquiry.length &&
-          inquiry.length < 2001
-        )
-      ) {
+      if (!(typeof inquiry === "string" && 29 < inquiry.length && inquiry.length < 2001)) {
         setSendStatus(3);
         throw new Error("Invalid inquiry. (min 30 char, max 2000 char)");
       }
@@ -115,9 +97,7 @@ const ContactFormDangerous: FC = () => {
         });
       } catch (err) {
         setSendStatus(3);
-        throw new Error(
-          `Failed${err instanceof AirtableError ? `: ${err.message}` : ""} 😕`,
-        );
+        throw new Error(`Failed${err instanceof AirtableError ? `: ${err.message}` : ""} 😕`);
       }
     }
   };
@@ -204,9 +184,7 @@ const ContactFormDangerous: FC = () => {
                   required: "Your organization is required",
                 })}
                 error={!!errors.organization}
-                helperText={
-                  errors?.organization ? errors.organization.message : "\u00a0"
-                }
+                helperText={errors?.organization ? errors.organization.message : "\u00a0"}
                 {...field}
               />
             )}
@@ -241,8 +219,7 @@ const ContactFormDangerous: FC = () => {
                 label={t.FORM.WALLET}
                 disabled={!!sendStatus}
                 {...register("wallet", {
-                  required:
-                    "Your Ethereum address is required (`0x...` or ENS)",
+                  required: "Your Ethereum address is required (`0x...` or ENS)",
                 })}
                 error={!!errors.wallet}
                 helperText={errors?.wallet ? errors.wallet.message : "\u00a0"}
@@ -265,8 +242,7 @@ const ContactFormDangerous: FC = () => {
                   required: "Your inquiry is required",
                   maxLength: {
                     value: 2000,
-                    message:
-                      "Your inquiry must be 2000 characters or fewer in length.",
+                    message: "Your inquiry must be 2000 characters or fewer in length.",
                   },
                 })}
                 error={!!errors.inquiry}
@@ -283,18 +259,8 @@ const ContactFormDangerous: FC = () => {
             margin-right: auto;
           `}
           >
-            <Button
-              endIcon={<SendIcon />}
-              type="submit"
-              variant="outlined"
-              color="inherit"
-              disabled={!!sendStatus}
-            >
-              {sendStatus
-                ? sendStatus === 2
-                  ? "Submitted"
-                  : "Submitting"
-                : "Send"}
+            <Button endIcon={<SendIcon />} type="submit" variant="outlined" color="inherit" disabled={!!sendStatus}>
+              {sendStatus ? (sendStatus === 2 ? "Submitted" : "Submitting") : "Send"}
             </Button>
           </div>
         </form>

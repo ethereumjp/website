@@ -14,9 +14,7 @@ const generateCspHeader = (nonce: string): string => {
   const csp = [
     `default-src 'strict-dynamic' 'nonce-${nonce}' 'self' https://lu.ma`,
     `script-src ${
-      process.env.NODE_ENV === "development"
-        ? "'unsafe-eval' 'unsafe-inline'"
-        : `'nonce-${nonce}'`
+      process.env.NODE_ENV === "development" ? "'unsafe-eval' 'unsafe-inline'" : `'nonce-${nonce}'`
     } 'self'`,
     "style-src 'unsafe-inline' 'self'",
     "img-src 'self'",
@@ -48,10 +46,7 @@ export const middleware = (req: NextRequest): NextResponse => {
 
   res.headers.set("Content-Security-Policy", newCsp);
   res.headers.set("Referrer-Policy", "same-origin");
-  res.headers.set(
-    "Strict-Transport-Security",
-    "max-age=63072000; includeSubDomains; preload",
-  );
+  res.headers.set("Strict-Transport-Security", "max-age=63072000; includeSubDomains; preload");
   res.headers.set("X-Content-Type-Options", "nosniff");
   res.headers.set("X-CSP-Nonce", newNonce);
   res.headers.set("X-DNS-Prefetch-Control", "on");

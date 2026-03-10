@@ -38,12 +38,9 @@ const Wanted: NextPage<PageProps> = ({ params, searchParams }) => {
         <section id="hiring">
           <div css={css`margin-bottom: 4rem;`}>
             <p>Ethereum Japanでは現在協力者を若干名募集しています。</p>
+            <p>人員の募集は、不定期で更新され、Twitterまたは本websiteにて告知を行います。</p>
             <p>
-              人員の募集は、不定期で更新され、Twitterまたは本websiteにて告知を行います。
-            </p>
-            <p>
-              Ethereum
-              Japanは有志団体であり、基本的に有償での対価は発生しません。
+              Ethereum Japanは有志団体であり、基本的に有償での対価は発生しません。
               <Link href="/about">私たちの主旨</Link>
               に賛同いただける方を募集しています。
             </p>

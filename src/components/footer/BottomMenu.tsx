@@ -40,50 +40,26 @@ export const BottomMenu = () => {
     <div css={wrapperStyle}>
       <section id="use_ethereum">
         <h4>触ってみる</h4>
-        <NavLink
-          id="wallet"
-          href="https://ethereum.org/ja/wallets/find-wallet/"
-          text="ウォレットを用意"
-        />
-        <NavLink
-          id="exchange"
-          href="https://ethereum.org/ja/get-eth/"
-          text="ETHを入手"
-        />
+        <NavLink id="wallet" href="https://ethereum.org/ja/wallets/find-wallet/" text="ウォレットを用意" />
+        <NavLink id="exchange" href="https://ethereum.org/ja/get-eth/" text="ETHを入手" />
       </section>
 
       <section id="learn_ethereum">
         <h4>理解する</h4>
-        <NavLink
-          id="whitepaper"
-          href="https://ethereum.org/en/whitepaper/"
-          text="Ethereum Whitepaper"
-        />
+        <NavLink id="whitepaper" href="https://ethereum.org/en/whitepaper/" text="Ethereum Whitepaper" />
       </section>
 
       <section id="develop_on_ethereum">
         <h4>開発する</h4>
-        <NavLink
-          id="documentation"
-          href="https://ethereum.org/ja/developers/docs/"
-          text="開発ドキュメント"
-        />
+        <NavLink id="documentation" href="https://ethereum.org/ja/developers/docs/" text="開発ドキュメント" />
       </section>
 
       <section id="ethereum_ecosystem">
         <h4>参加する</h4>
         <NavLink id="participate" href="/about/joinus/" text="メンバー募集" />
 
-        <NavLink
-          id="participate"
-          href="https://ethereum.org/ja/community/get-involved/"
-          text="いろんな関わり方"
-        />
-        <NavLink
-          id="online"
-          href="https://ethereum.org/ja/community/online/"
-          text="オンラインコミュニティ"
-        />
+        <NavLink id="participate" href="https://ethereum.org/ja/community/get-involved/" text="いろんな関わり方" />
+        <NavLink id="online" href="https://ethereum.org/ja/community/online/" text="オンラインコミュニティ" />
       </section>
 
       <section id="for_enterprise">
@@ -94,11 +70,7 @@ export const BottomMenu = () => {
       <section id="about_ethereum_jp">
         <h4>Ethereum Japanについて</h4>
         <NavLink id="about" href="/about" text="Ethereum Japanとは" />
-        <NavLink
-          id="discord"
-          href="https://discord.gg/Tm5jU3DSCE"
-          text="EJ Discord"
-        />
+        <NavLink id="discord" href="https://discord.gg/Tm5jU3DSCE" text="EJ Discord" />
       </section>
     </div>
   );

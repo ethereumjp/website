@@ -101,13 +101,7 @@ export const NavMenu: FC = () => {
     newpage?: boolean;
   }> = ({ id, href, text, bold, newpage }) => {
     return (
-      <Link
-        id={id}
-        href={href}
-        passHref={true}
-        target={newpage ? "_blank" : "_self"}
-        css={menuLinkStyle}
-      >
+      <Link id={id} href={href} passHref={true} target={newpage ? "_blank" : "_self"} css={menuLinkStyle}>
         {text}
       </Link>
     );

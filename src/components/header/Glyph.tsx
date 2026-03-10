@@ -3,7 +3,7 @@ import ethjp_logo from "/public/logo/ej.png";
 import { css } from "@emotion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 
 export const Glyph: FC = () => {
   const glyphStyle = css`

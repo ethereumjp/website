@@ -3,7 +3,7 @@ import ContactFormDangerous from "@/components/forms/ContactForm_dangerous";
 import Layout from "@/components/layouts/base";
 import { mq } from "@/themes/settings/breakpoints";
 import { css } from "@emotion/react";
-import { NextPage } from "next";
+import type { NextPage } from "next";
 
 const Contact: NextPage = () => {
   const titleStyle = css`

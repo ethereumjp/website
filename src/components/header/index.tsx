@@ -4,7 +4,7 @@ import { Glyph } from "./Glyph";
 import { NavMenu } from "./NavMenu";
 
 import { css } from "@emotion/react";
-import { FC } from "react";
+import type { FC } from "react";
 
 const Header: FC<ComponentProps> = ({ children }) => {
   const header = css`

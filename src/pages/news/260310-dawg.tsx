@@ -2,7 +2,7 @@
 import Layout from "@/components/layouts/base";
 import { mq } from "@/themes/settings/breakpoints";
 import { css } from "@emotion/react";
-import { NextPage } from "next";
+import type { NextPage } from "next";
 
 
 const Release: NextPage = () => {

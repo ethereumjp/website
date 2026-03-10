@@ -1,7 +1,7 @@
 import Layout from "@/components/layouts/base";
 import type { PageProps } from "@/types";
 import { css } from "@emotion/react";
-import { NextPage } from "next";
+import type { NextPage } from "next";
 
 const Events: NextPage<PageProps> = ({ params, searchParams }) => {
   const calWrapper = css`

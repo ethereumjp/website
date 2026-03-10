@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 
 import Layout from "@/components/layouts/base";
 import { mq } from "@/themes/settings/breakpoints";

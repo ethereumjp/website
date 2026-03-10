@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 
 import Layout from "@/components/layouts/base";
 import { mq } from "@/themes/settings/breakpoints";
@@ -65,8 +65,8 @@ const Wanted: NextPage<PageProps> = ({ params, searchParams }) => {
                   <li css={css`list-style-type: none;`}>
                     <h3>{p.role}</h3>
                     <ul>
-                      {p.requirements.map((r) => (
-                        <li>{r}</li>
+                      {p.requirements.map((_, r) => (
+                        <li key={_}>{r}</li>
                       ))}
                     </ul>
                   </li>

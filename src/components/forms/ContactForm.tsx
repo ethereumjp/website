@@ -2,8 +2,8 @@ import { css } from "@emotion/react";
 import SendIcon from "@mui/icons-material/Send";
 import { Alert, Button, TextField, ThemeProvider, createTheme } from "@mui/material";
 import { useRouter } from "next/router";
-import { FC, useState } from "react";
-import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { type FC, useState } from "react";
+import { Controller, type SubmitHandler, useForm } from "react-hook-form";
 
 import { useLocale } from "@/hooks/useLocale";
 

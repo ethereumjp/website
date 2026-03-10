@@ -2,7 +2,7 @@ name: check
 
 on:
   push:
-    branches-ignore: main
+    branches-ignore: [main]
 
 jobs:
   ci:

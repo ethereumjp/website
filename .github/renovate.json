@@ -1,10 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>hatena/renovate-config",
-    ":automergePatch",
-    ":disableRateLimiting"
-  ],
+  "extends": ["github>hatena/renovate-config", ":automergePatch", ":disableRateLimiting"],
   "schedule": ["before 8am on Saturday"],
   "labels": ["dependencies"],
   "platformAutomerge": true,

@@ -101,13 +101,7 @@ export const NavMenu: FC = () => {
     newpage?: boolean;
   }> = ({ id, href, text, bold, newpage }) => {
     return (
-      <Link
-        id={id}
-        href={href}
-        passHref={true}
-        target={newpage ? "_blank" : "_self"}
-        css={menuLinkStyle}
-      >
+      <Link id={id} href={href} passHref={true} target={newpage ? "_blank" : "_self"} css={menuLinkStyle}>
         {text}
       </Link>
     );
@@ -125,6 +119,7 @@ export const NavMenu: FC = () => {
           ETHTokyo
         </a> */}
         <MenuItem id="events" href="/event" text="Events" />
+        <MenuItem id="news" href="/news" text="News" />
         <MenuItem id="contact" href="/contact" text="Contact" />
         <MenuItem id="about" href="/about" text="About Us" />
       </div>

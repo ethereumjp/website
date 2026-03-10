@@ -3,7 +3,7 @@ import { BottomMenu } from "./BottomMenu";
 import { Socials } from "./Socials";
 
 import { css } from "@emotion/react";
-import { FC } from "react";
+import type { FC } from "react";
 
 const Footer: FC<ComponentProps> = ({ children }) => {
   const footerStyle = css`

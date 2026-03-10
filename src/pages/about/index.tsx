@@ -32,18 +32,12 @@ const About: NextPage<PageProps> = ({ params, searchParams }) => {
     <Layout pageTitle="about">
       <h1 css={titleStyle}>ABOUT US</h1>
       <div css={wrapperStyle}>
-        <p>
-          Ethereum
-          JapanはEthereumを中心として広くblockhchain技術の推進と情報発信を行っていく非営利の団体です。
-        </p>
+        <p>Ethereum JapanはEthereumを中心として広くblockhchain技術の推進と情報発信を行っていく非営利の団体です。</p>
         <p>
           日本だけでなく、積極的に海外とのコミュニティとも連携して活動を行います。
           活動はTwitterによる発信や、定期的なEvent運営、研究など多岐にわたります。
         </p>
-        <p>
-          過去には、Ethereum
-          Foundationのコアデベロッパーを招いてイベントも開催しています。
-        </p>
+        <p>過去には、Ethereum Foundationのコアデベロッパーを招いてイベントも開催しています。</p>
       </div>
     </Layout>
   );

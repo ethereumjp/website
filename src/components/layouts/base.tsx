@@ -10,7 +10,7 @@ import type { PageProps } from "@/types";
 import { CacheProvider, Global, ThemeProvider, css } from "@emotion/react";
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import { FC } from "react";
+import type { FC } from "react";
 
 export const metadata = {
   title: {

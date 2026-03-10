@@ -32,10 +32,7 @@ const validateWalletAddress = (address: string) => {
   return re.test(address) || re_ens.test(address);
 };
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ResponseData | string>,
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<ResponseData | string>) {
   let ip = req.headers["x-real-ip"] as string;
   const forwardedFor = req.headers["x-forwarded-for"] as string;
   if (!ip && forwardedFor) {
@@ -48,11 +45,7 @@ export default async function handler(
     console.error(err);
     return res
       .status(429)
-      .end(
-        `Rate Limited: ${
-          err instanceof Error ? err.message : "server is currently busy"
-        }. IP log: ${ip}`,
-      );
+      .end(`Rate Limited: ${err instanceof Error ? err.message : "server is currently busy"}. IP log: ${ip}`);
   }
 
   switch (req.method) {
@@ -75,16 +68,8 @@ export default async function handler(
       if (!(typeof name === "string" && 2 < name.length && name.length < 31)) {
         return res.status(400).end("Invalid name. (min 3 char, max 30 char)");
       }
-      if (
-        !(
-          typeof organization === "string" &&
-          2 < organization.length &&
-          organization.length < 31
-        )
-      ) {
-        return res
-          .status(400)
-          .end("Invalid organization. (min 3 char, max 30 char)");
+      if (!(typeof organization === "string" && 2 < organization.length && organization.length < 31)) {
+        return res.status(400).end("Invalid organization. (min 3 char, max 30 char)");
       }
       if (!validateEmail(email)) {
         return res.status(400).end("Invalid email address.");
@@ -92,16 +77,8 @@ export default async function handler(
       if (!validateWalletAddress(wallet)) {
         return res.status(400).end("Invalid wallet address.");
       }
-      if (
-        !(
-          typeof inquiry === "string" &&
-          29 < inquiry.length &&
-          inquiry.length < 2001
-        )
-      ) {
-        return res
-          .status(400)
-          .end("Invalid inquiry. (min 30 char, max 2000 char)");
+      if (!(typeof inquiry === "string" && 29 < inquiry.length && inquiry.length < 2001)) {
+        return res.status(400).end("Invalid inquiry. (min 30 char, max 2000 char)");
       }
       console.log("New submission: ", newInquiry);
       try {
@@ -114,19 +91,11 @@ export default async function handler(
           posted: newRecords.fields as SubmittedRecord,
         });
       } catch (err) {
-        return res
-          .status(500)
-          .end(
-            `Failed${
-              err instanceof AirtableError ? `: ${err.message}` : ""
-            } 😕`,
-          );
+        return res.status(500).end(`Failed${err instanceof AirtableError ? `: ${err.message}` : ""} 😕`);
       }
     }
     default: {
-      return res
-        .status(405)
-        .end(`Method ${req.method} Not Allowed. IP log: ${ip}`);
+      return res.status(405).end(`Method ${req.method} Not Allowed. IP log: ${ip}`);
     }
   }
 }

@@ -1,11 +1,4 @@
-import Document, {
-  DocumentContext,
-  DocumentInitialProps,
-  Head,
-  Html,
-  Main,
-  NextScript,
-} from "next/document";
+import Document, { type DocumentContext, type DocumentInitialProps, Head, Html, Main, NextScript } from "next/document";
 
 type NoncedDocument = DocumentInitialProps & { nonce: string };
 
@@ -17,18 +10,9 @@ const CustomDocument = (props: NoncedDocument) => {
         <meta property="og:url" content="ethereumjp.org" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Ethereum Japan" />
-        <meta
-          property="og:image"
-          content="https://ethereumjp.org/images/hero-panda.png"
-        />
-        <meta
-          property="og:description"
-          content="Ethereum Japan aims to spread and support Ethereum use in Japan."
-        />
-        <meta
-          name="description"
-          content="Ethereum Japan aims to spread and support Ethereum use in Japan."
-        />
+        <meta property="og:image" content="https://ethereumjp.org/images/hero-panda.png" />
+        <meta property="og:description" content="Ethereum Japan aims to spread and support Ethereum use in Japan." />
+        <meta name="description" content="Ethereum Japan aims to spread and support Ethereum use in Japan." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@Ethereum_JP" />
         <meta property="csp-nonce" content={props.nonce} />
@@ -42,9 +26,7 @@ const CustomDocument = (props: NoncedDocument) => {
   );
 };
 
-CustomDocument.getInitialProps = async (
-  ctx: DocumentContext,
-): Promise<NoncedDocument> => {
+CustomDocument.getInitialProps = async (ctx: DocumentContext): Promise<NoncedDocument> => {
   const initialProps = await Document.getInitialProps(ctx);
   const nonce = (ctx.req?.headers["x-csp-nonce"] as string) ?? "";
 

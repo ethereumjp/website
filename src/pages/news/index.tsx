@@ -5,7 +5,7 @@ import { mq } from "@/themes/settings/breakpoints";
 import { css } from "@emotion/react";
 import type { NextPage } from "next";
 
-const Contact: NextPage = () => {
+const News: NextPage = () => {
   const titleStyle = css`
     font-size: 2rem;
     font-weight: 300;
@@ -30,13 +30,19 @@ const Contact: NextPage = () => {
   `;
 
   return (
-    <Layout pageTitle="Contact">
-      <h1 css={titleStyle}>CONTACT US</h1>
+    <Layout pageTitle="News">
+      <h1 css={titleStyle}>NEWS</h1>
       <div css={formWrapperStyle}>
-        <ContactFormDangerous />
+        <ul>
+          {" "}
+          {/* TODO: Show list of news from /news folder */}
+          <li>
+            <a href="/news/260310-dawg">デジタル資産ワーキンググループ（DAWG）を設立しました</a>
+          </li>
+        </ul>
       </div>
     </Layout>
   );
 };
 
-export default Contact;
+export default News;

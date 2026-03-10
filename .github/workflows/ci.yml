@@ -29,6 +29,7 @@ jobs:
         if: steps.build-cache.outputs.cache-hit != 'true'
         run: yarn turbo build
         env:
+          DO_NOT_TRACK: 1
           NEXT_PUBLIC_AIRTABLE_PAT: ${{ secrets.NEXT_PUBLIC_AIRTABLE_PAT }}
           NEXT_PUBLIC_AIRTABLE_BASE: ${{ secrets.NEXT_PUBLIC_AIRTABLE_BASE }}
           NEXT_PUBLIC_AIRTABLE_TABLE: ${{ secrets.NEXT_PUBLIC_AIRTABLE_TABLE }}

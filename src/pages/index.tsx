@@ -34,14 +34,13 @@ const Page: NextPage<PageProps> = ({ params, searchParams }) => {
       </div>
       <div>
         <section css={introStyle}>
-          <h1 className="">イーサリアム・ジャパンへようこそ</h1>
+          <h1 className="">Ethereum Japan</h1>
           <p
             css={css`
               font-size: 1.3rem;
             `}
           >
-            イーサリアムは、暗号通貨Ether
-            (ETH)、何千もの分散型アプリを可能にするコミュニティにより運用されているテクノロジーです。
+            Ethereumは、分散型アプリを可能にするコミュニティにより運用されているテクノロジーです。
           </p>
         </section>
       </div>

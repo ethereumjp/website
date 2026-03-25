@@ -14,7 +14,6 @@ export const globalStyles = css({
     fontWeight: 300,
     letterSpacing: "0.25rem",
     paddingTop: "4rem",
-    textAlign: "center",
 
     [mq.desktop]: {
       fontSize: "3rem",
@@ -29,7 +28,6 @@ export const globalStyles = css({
     fontWeight: 600,
     letterSpacing: "0.125rem",
     paddingTop: "1.5rem",
-    textAlign: "center",
 
     [mq.desktop]: {
       fontSize: "1.5rem",

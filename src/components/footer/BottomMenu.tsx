@@ -56,7 +56,7 @@ export const BottomMenu = () => {
 
       <section id="ethereum_ecosystem">
         <h4>我々の取り組み</h4>
-        <NavLink id="ethtokyo" href="/ethtokyo" text="ETHTokyo" />
+        <NavLink id="ethtokyo" href="https://www.ethtokyo.org" text="ETHTokyo" />
         <NavLink id="dawg" href="/dawg" text="デジタル資産WG" />
       </section>
 

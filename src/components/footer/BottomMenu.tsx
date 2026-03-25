@@ -70,7 +70,7 @@ export const BottomMenu = () => {
       <section id="about_ethereum_jp">
         <h4>Ethereum Japanについて</h4>
         <NavLink id="about" href="/about" text="Ethereum Japanとは" />
-        <NavLink id="discord" href="https://discord.gg/Tm5jU3DSCE" text="EJ Discord" />
+        <NavLink id="privacy" href="/privacy-policy" text="プライバシーポリシー" />
       </section>
     </div>
   );

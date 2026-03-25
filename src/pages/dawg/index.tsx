@@ -33,7 +33,7 @@ const About: NextPage<PageProps> = ({ params, searchParams }) => {
 
   return (
     <Layout pageTitle="about">
-      <h1 css={titleStyle}>ETHTokyo 2024</h1>
+      <h1 css={titleStyle}>Digital Assets Working Group</h1>
       <div css={wrapperStyle}>
         <h2>Hackathon: Aug. 23 - 25 / Conference: Aug. 26</h2>
         <br />

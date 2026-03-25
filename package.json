@@ -1,7 +1,7 @@
 {
-  "name": "ethereumjp.org",
+  "name": "ethereum-japan.org",
   "version": "1.0.0",
-  "description": "Ethereum JP website",
+  "description": "Ethereum Japan website",
   "main": "src/pages/_app.tsx",
   "repository": {
     "type": "git",

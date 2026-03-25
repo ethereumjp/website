@@ -55,11 +55,9 @@ export const BottomMenu = () => {
       </section>
 
       <section id="ethereum_ecosystem">
-        <h4>参加する</h4>
-        <NavLink id="participate" href="/about/joinus/" text="メンバー募集" />
-
-        <NavLink id="participate" href="https://ethereum.org/ja/community/get-involved/" text="いろんな関わり方" />
-        <NavLink id="online" href="https://ethereum.org/ja/community/online/" text="オンラインコミュニティ" />
+        <h4>我々の取り組み</h4>
+        <NavLink id="ethtokyo" href="/ethtokyo" text="ETHTokyo" />
+        <NavLink id="dawg" href="/dawg" text="デジタル資産WG" />
       </section>
 
       <section id="for_enterprise">
@@ -71,6 +69,7 @@ export const BottomMenu = () => {
         <h4>Ethereum Japanについて</h4>
         <NavLink id="about" href="/about" text="Ethereum Japanとは" />
         <NavLink id="privacy" href="/privacy-policy" text="プライバシーポリシー" />
+        <NavLink id="joinus" href="/about/joinus" text="採用情報" />
       </section>
     </div>
   );

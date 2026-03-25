@@ -10,7 +10,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/ethtokyo2024",
+        source: "/ethtokyo",
         destination: "https://www.ethtokyo.org",
         permanent: true,
       },

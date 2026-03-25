@@ -15,7 +15,7 @@ const Events: NextPage<PageProps> = ({ params, searchParams }) => {
         <div css={calWrapper}>
           <iframe
             title="calendar"
-            src="https://lu.ma/embed/calendar/cal-FMaPKHYZLXA2VzT/events?compact=true&lt=light"
+            src="https://luma.com/embed/calendar/cal-FMaPKHYZLXA2VzT/events?compact=true&lt=light"
             width="600"
             height="450"
             css={css`border: 1px solid #bfcbda88; border-radius: 4px;`}
